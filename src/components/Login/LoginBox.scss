@@ -1,0 +1,13 @@
+.login-box {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  span {
+    color: white;
+    margin: 5px;
+    font-size: 48px;
+  }
+}
