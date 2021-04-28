@@ -1,0 +1,30 @@
+.login-input-box {
+  position: relative;
+  width: 650px;
+  margin: 5px;
+
+  label {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: .4em .2em;
+    cursor: text;
+
+    color: white;
+    opacity: 0.8;
+  }
+
+  input[type="text"],input[type="password"] {
+    width: 100%;
+    height: auto;
+    background-color: rgba(196, 196, 196, 0.15);
+    line-height: normal;
+    padding: .8em 0;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline-style: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
