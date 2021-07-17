@@ -5,18 +5,10 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import './styles.css';
 
 class FullpageWrapper extends React.Component {
-  onLeave(origin, destination, direction) {
-    console.log('Leaving section ' + origin.index);
-  }
-  afterLoad(origin, destination, direction) {
-    console.log('After load: ' + destination.index);
-  }
   render() {
     return (
       <ReactFullpage
         sectionsColor={['orange', 'purple', 'green']}
-        onLeave={this.onLeave.bind(this)}
-        afterLoad={this.afterLoad.bind(this)}
         render={({state, fullpageApi}) => {
           return (
             <div id="fullpage-wrapper">
@@ -48,6 +40,6 @@ class FullpageWrapper extends React.Component {
   }
 }
 
-ReactDOM.render(<FullpageWrapper />, document.getElementById('react-root'));
+ReactDOM.render(<FullpageWrapper />, document.getElementById('root'));
 
 export default FullpageWrapper;
