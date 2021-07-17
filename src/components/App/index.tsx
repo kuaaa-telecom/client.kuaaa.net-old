@@ -1,33 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactFullpage from '@fullpage/react-fullpage';
 
-import './styles.css';
+import './style.css';
 
 class FullpageWrapper extends React.Component {
   render() {
     return (
       <ReactFullpage
-        sectionsColor={['orange', 'purple', 'green']}
         render={({state, fullpageApi}) => {
           return (
             <div id="fullpage-wrapper">
-              <div className="section section1">
-                <h3>Section 1</h3>
+              <div className="section" id="section0">
+                <h3>Hi</h3>
               </div>
-              <div className="section">
+              <div className="section main" id="section1">
                 <div className="slide">
-                  <h3>Slide 2.1</h3>
+                  <h3>엄</h3>
                 </div>
                 <div className="slide">
-                  <h3>Slide 2.2</h3>
+                  <h3>준</h3>
                 </div>
                 <div className="slide">
-                  <h3>Slide 2.3</h3>
+                  <h3>식</h3>
                 </div>
               </div>
-              <div className="section">
-                <h3>Section 3</h3>
+              <div className="section foot" id="section2">
+                <h3>은 살아있다</h3>
                 <button onClick={() => fullpageApi.moveTo(1, 0)}>
                   Move top
                 </button>
@@ -39,7 +37,5 @@ class FullpageWrapper extends React.Component {
     );
   }
 }
-
-ReactDOM.render(<FullpageWrapper />, document.getElementById('root'));
 
 export default FullpageWrapper;
