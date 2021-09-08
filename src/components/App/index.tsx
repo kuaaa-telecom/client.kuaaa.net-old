@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import {LoginArea} from '../Login';
 
 import './style.css';
 
@@ -11,6 +12,7 @@ class FullpageWrapper extends React.Component {
           return (
             <div id="fullpage-wrapper">
               <div className="section" id="section0">
+                <LoginArea/>
                 <h3>Hi</h3>
               </div>
               <div className="section main" id="section1">
