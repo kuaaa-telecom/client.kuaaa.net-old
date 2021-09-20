@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Button, Input, CircularProgress, Text} from '@chakra-ui/react';
-import { exception } from 'node:console';
 
 
 export const LoginArea = () => {
