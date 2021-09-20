@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Button, Input, CircularProgress, Text} from '@chakra-ui/react';
+import { exception } from 'node:console';
 
 
 export const LoginArea = () => {
@@ -35,31 +36,35 @@ const LoginHeader = () => {
 const LoginForm = () => {
   const [id, setid] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
   const [isLoading, setisLoading] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const loginHandler = async (event: React.FormEvent) => {
-    event.preventDefault();
-    setisLoading(true);
+    try {
+      event.preventDefault();
+      setisLoading(true);
 
-    const response = await fetch(
-        'http://localhost:31413/auth/login'
-        , {
-          method: 'POST',
-          body: JSON.stringify({id, password}),
-          headers: {'Content-Type': 'application/json'},
-          mode: 'cors',
-        },
-    );
-    const data = await response.json();
-    if (data.token) {
-      setIsLoggedIn(true);
-      setError('');
-      localStorage.setItem('token', data.token);
-    } else {
-      setError(data.msg);
+      const response = await fetch(
+          'http://localhost:31413/auth/login'
+          , {
+            method: 'POST',
+            body: JSON.stringify({id, password}),
+            headers: {'Content-Type': 'application/json'},
+            mode: 'cors',
+          },
+      );
+      const data = await response.json();
+      if (data.token) {
+        setIsLoggedIn(true);
+        setErrorMsg('');
+        localStorage.setItem('token', data.token);
+      } else {
+        setErrorMsg(data.msg);
+      }
+      setisLoading(false);
+    } catch (e) {
+      setErrorMsg(`Something went wrong: ${e.toString()}`);
     }
-    setisLoading(false);
   };
   return (
     <Box my={4} textAlign='left'>
@@ -78,7 +83,7 @@ const LoginForm = () => {
           </Box>
       ) : (
       <form onSubmit={loginHandler}>
-        <Text color="cyan" align="center">{error}</Text>
+        <Text color="cyan" align="center">{errorMsg}</Text>
         <FormControl isRequired>
           <FormLabel>ID</FormLabel>
           <Input type="id" placeholder="sirius" onChange={(event) => setid(event.currentTarget.value)}/>
