@@ -60,9 +60,10 @@ const LoginForm = () => {
       } else {
         setErrorMsg(data.msg);
       }
-      setisLoading(false);
     } catch (e) {
       setErrorMsg(`Something went wrong: ${e.toString()}`);
+    } finally {
+      setisLoading(false);
     }
   };
   return (
