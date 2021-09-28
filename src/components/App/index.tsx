@@ -8,29 +8,27 @@ class FullpageWrapper extends React.Component {
   render() {
     return (
       <ReactFullpage
+        navigation={true}
+        navigationPosition="right"
+        navigationTooltips={['로그인', 'KUAAA란?', '관측회', '세미나', '사진전', '그 외', '연락처 / 찾아오는 길']}
+        showActiveTooltip={true}
         render={({state, fullpageApi}) => {
           return (
             <div id="fullpage-wrapper">
-              <div className="section" id="section0">
+              <div className="section" id="slide_login">
                 <LoginArea/>
-                <h3></h3>
               </div>
-              <div className="section main" id="section1">
-                <div className="slide">
-                  <h3></h3>
-                </div>
-                <div className="slide">
-                  <h3></h3>
-                </div>
-                <div className="slide">
-                  <h3></h3>
-                </div>
+              <div className="section foot" id="slide_about">
               </div>
-              <div className="section foot" id="section2">
-                <h3></h3>
-                <button onClick={() => fullpageApi.moveTo(1, 0)}>
-                  Move top
-                </button>
+              <div className="section main" id="slide_observation">
+              </div>
+              <div className="section foot" id="slide_seminar">
+              </div>
+              <div className="section foot" id="slide_exhibition">
+              </div>
+              <div className="section foot" id="slide_etc">
+              </div>
+              <div className="section foot" id="slide_contact">
               </div>
             </div>
           );

@@ -27,7 +27,7 @@ export const LoginArea = () => {
 const LoginHeader = () => {
   return (
     <Box textAlign="center">
-      <Heading>kuaaa.net 로그인</Heading>
+      <Heading><Text>혼저옵서예</Text></Heading>
     </Box>
   );
 };
@@ -72,7 +72,7 @@ const LoginForm = () => {
     <Box my={4} textAlign='left'>
       {isLoggedIn ? (
           <Box textAlign="center">
-            <Text my={4} >Hello <Text as="span" color="yellow.200">{id}</Text></Text>
+            <Text my={4} >안녕하세요 <Text as="span" color="yellow.200">{id}</Text> 님.</Text>
             <Text fontSize="md">kuaaa.net은 아직 준비중이에요!</Text>
             <Button
               variant="outline"
