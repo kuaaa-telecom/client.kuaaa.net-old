@@ -13,21 +13,21 @@ class FullpageWrapper extends React.Component {
             <div id="fullpage-wrapper">
               <div className="section" id="section0">
                 <LoginArea/>
-                <h3>Hi</h3>
+                <h3></h3>
               </div>
               <div className="section main" id="section1">
                 <div className="slide">
-                  <h3>엄</h3>
+                  <h3></h3>
                 </div>
                 <div className="slide">
-                  <h3>준</h3>
+                  <h3></h3>
                 </div>
                 <div className="slide">
-                  <h3>식</h3>
+                  <h3></h3>
                 </div>
               </div>
               <div className="section foot" id="section2">
-                <h3>은 살아있다</h3>
+                <h3></h3>
                 <button onClick={() => fullpageApi.moveTo(1, 0)}>
                   Move top
                 </button>
