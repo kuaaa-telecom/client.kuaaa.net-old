@@ -119,8 +119,6 @@ const LoginForm = () => {
 const LoginFooter = () => {
   return (
     <Box>
-      <Text color="#dc143c" as="b" opacity={0.8}>고려대학교 아마추어 천문회<br/></Text>
-      <Text color="#dc143c" as="b" opacity={0.8}>Korea University Amateur Astronomical Association</Text>
     </Box>
   );
 };

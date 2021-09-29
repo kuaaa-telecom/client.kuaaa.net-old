@@ -1,10 +1,10 @@
 #slide_login {
-    background-image: url("/src/image/s0_bg.png");
+    background-image: url("/src/image/slide_login.png");
     background-size:     cover;
     background-repeat:   no-repeat;
 }
 #slide_about {
-    background-image: url("/src/image/s1_bg.jpg");
+    background-image: url("/src/image/slide_about.jpg");
     background-size:     cover;
     background-repeat:   no-repeat;
 }
@@ -12,4 +12,26 @@
 #fp-nav ul li a span, 
 .fp-slidesNav ul li a span {
     background: white;
+}
+
+#header{
+    position:fixed;
+    height: 100px;
+    display:block;
+    width: 100%;
+    z-index:9;
+    text-align:left;
+    color: #f2f2f2;
+    padding: 20px;
+}
+
+#header{
+    top:0px;
+}
+
+#more{
+    position:absolute;
+    bottom:0%;
+    left: 50%;
+    transform: translateX(-45%);
 }
