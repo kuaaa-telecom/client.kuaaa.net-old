@@ -23,6 +23,17 @@ class FullpageWrapper extends React.Component {
                   <More/>
                 </div>
                 <div className="section" id="slide_about">
+                  <div className="section-content">
+                    <div className="section-title">
+                      <h1>KUAAA</h1>
+                    </div>
+                    <div className="section-subtitle">
+                      고려대학교 아마추어 천문회, 쿠아
+                    </div>
+                    <div className="section-text">
+                      화이팅!
+                    </div>
+                  </div>
                 </div>
                 <div className="section" id="slide_observation">
                 </div>
