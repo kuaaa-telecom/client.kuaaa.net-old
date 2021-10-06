@@ -1834,6 +1834,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/source-sans-pro@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.5.0.tgz#19726a3c609f9450bfc53811b8497d4684ff2111"
+  integrity sha512-+ze+nO9dVN5pAVg9CdQmVgR6f8kDpq/elHMGcyx3qsW4+TN4mI7EuMdNzKP3E1xeZwTHSmHY5bezpfFHX7bQsg==
+
 "@fullpage/react-fullpage@^0.1.19":
   version "0.1.19"
   resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.19.tgz#770ecfc96475900007ce1c29376da7fa11fb26a8"
