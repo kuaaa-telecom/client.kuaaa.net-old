@@ -4,6 +4,10 @@
     background-position: center;
 }
 
+.contents{
+    font-family: 'Source Sans Pro';
+}
+
 #slide_login {
     background-image: url("/src/image/slide_login.png");
 }

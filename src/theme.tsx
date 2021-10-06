@@ -5,6 +5,14 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 };
 
-const theme = extendTheme({config});
+const fontmode = {
+  fonts: {
+    heading: 'Source Sans Pro',
+    body: 'Source Sans Pro',
+  },
+};
+
+const theme = extendTheme({config, fontmode});
+
 
 export default theme;
