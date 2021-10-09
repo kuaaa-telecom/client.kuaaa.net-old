@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import {LoginArea} from './Login';
-import {More, Header, About, Observation, Seminar, Exhibition, Etc} from './contents';
+import {More, Header, About, Observation, Seminar, Exhibition, Etc, Contact} from './contents';
 
 import './style.css';
 
@@ -37,8 +37,8 @@ class FullpageWrapper extends React.Component {
                 <div className="section contents" id="slide_etc">
                   <Etc/>
                 </div>
-                <div className="section contents" id="slide_contact">
-                  TODO
+                <div className="section contents fp-auto-height" id="slide_contact">
+                  <Contact/>
                 </div>
               </div>
             );

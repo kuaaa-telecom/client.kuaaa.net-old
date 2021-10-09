@@ -54,3 +54,9 @@
     left: 50%;
     transform: translateX(-45%);
 }
+
+#react-naver-map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
