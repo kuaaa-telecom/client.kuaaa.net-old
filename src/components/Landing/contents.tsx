@@ -1,6 +1,10 @@
 import React from 'react';
-import {Box, Text} from '@chakra-ui/react';
+import {Box, Text, Flex, Spacer, Icon, Link} from '@chakra-ui/react';
 import {ArrowDownIcon} from '@chakra-ui/icons';
+import {AiFillFacebook, AiFillInstagram} from 'react-icons/ai';
+
+import {NaverMap, RenderAfterNavermapsLoaded, Marker} from 'react-naver-maps';
+
 
 export const More = () => {
   return (
@@ -148,3 +152,59 @@ export const Etc = () => {
     </Box>
   );
 };
+
+
+export const Contact = () => {
+  return (
+    <Box>
+      <Flex minHeight="60%" my="10%" mb="15%" px="10%">
+        <Box width="50%" my="-10%" justifyContent="center" textAlign="center">
+          <Text fontSize="2xl" fontWeight="bold">찾아오는 길</Text>
+          <Text mt={3} mb={5} fontWeight="semibold">고려대학교 자연계캠퍼스 애기능학생회관 403호</Text>
+          <RenderAfterNavermapsLoaded
+            ncpClientId={'pbfok70sy9'}>
+            <NaverMap
+              mapDivId={'naver-maps-kuaaa'}
+              style={{
+                width: '80%',
+                height: '90%',
+              }}
+              defaultCenter={{lat: 37.582451, lng: 127.027568}}
+              defaultZoom={16}
+            >
+              <Marker
+                key={1}
+                position={{lat: 37.582451, lng: 127.027568}}
+                animation={2}
+              />
+            </NaverMap>
+          </RenderAfterNavermapsLoaded>
+        </Box>
+        <Spacer/>
+        <Box textAlign="center">
+          <Text fontSize="2xl" fontWeight="bold">문의</Text>
+          <Flex my={3}>
+            <Spacer/>
+            <Link href="https://www.facebook.com/KUAAA1982" isExternal>
+              <Icon as={AiFillFacebook} width={10} height={10} color="blue.400" />
+            </Link>
+            <Spacer/>
+            <Link href="https://www.instagram.com/koreauniv_aaa/?hl=ko" isExternal>
+              <Icon as={AiFillInstagram} width={10} height={10} color="red.200"/>
+            </Link>
+            <Spacer/>
+          </Flex>
+        </Box>
+        <Spacer/>
+        <Box textAlign="center">
+          <Text fontSize="2xl" fontWeight="bold">가입하는 법</Text>
+          <Text fontSize="lg" mt={2}>동아리방에서 가입원서 직접 작성</Text>
+          <Text textAlign="center">or</Text>
+          <Text fontSize="lg" textAlign="center">온라인 구글폼 가입원서 기입</Text>
+          <Box height={10} />
+        </Box>
+      </Flex>
+    </Box>
+  );
+};
+
