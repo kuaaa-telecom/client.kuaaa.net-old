@@ -17,37 +17,6 @@ export const Header = () => {
 };
 
 const opacity = 0.8;
-
-type LTextBoxProp = {
-  title: JSX.Element,
-  subtitle: JSX.Element,
-  maintext: JSX.Element,
-};
-export const LTextBox = ({title, subtitle, maintext}: LTextBoxProp) => {
-  const opacity = 0.8;
-  const fromLeft = '25%';
-  const boxWidth = '25%';
-  return (
-    <Box mx={fromLeft} maxW={boxWidth}>
-      <Box>
-        <Text fontSize="7xl" fontWeight="bold">
-          {title}
-        </Text>
-      </Box>
-      <Box my={-5}>
-        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity}>
-          {subtitle}
-        </Text>
-      </Box>
-      <Box my={20}>
-        <Text fontSize="md" fontWeight="medium">
-          {maintext}
-        </Text>
-      </Box>
-    </Box>
-  );
-};
-
 export const About = () => {
   return (
     <Box maxW="25%" mx="20%">
