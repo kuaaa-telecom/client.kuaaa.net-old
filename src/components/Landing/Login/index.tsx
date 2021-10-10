@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Button, Input, CircularProgress, Text} from '@chakra-ui/react';
+import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Button, Input, CircularProgress, Text, Img, Spacer} from '@chakra-ui/react';
 
+import KUAAAWhiteLogo from '../../../image/kuaaa_logo_white.png';
 
 export const LoginArea = () => {
   return (
@@ -27,7 +28,13 @@ export const LoginArea = () => {
 const LoginHeader = () => {
   return (
     <Box textAlign="center">
-      <Heading><Text>혼저옵서예</Text></Heading>
+      <Heading>
+        <Flex>
+          <Spacer/>
+          <Img src={KUAAAWhiteLogo} width="25%" height="25%"></Img>
+          <Spacer/>
+        </Flex>
+      </Heading>
     </Box>
   );
 };

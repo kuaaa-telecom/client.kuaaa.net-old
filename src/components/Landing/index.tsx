@@ -37,7 +37,7 @@ class FullpageWrapper extends React.Component {
                 <div className="section contents" id="slide_etc">
                   <Etc/>
                 </div>
-                <div className="section contents fp-auto-height" id="slide_contact">
+                <div className="section contents" id="slide_contact">
                   <Contact/>
                 </div>
               </div>

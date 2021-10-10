@@ -1,10 +1,10 @@
 import React from 'react';
-import {Box, Text, Flex, Spacer, Icon, Link} from '@chakra-ui/react';
+import {Box, Text, Flex, Spacer, Icon, Link, Img} from '@chakra-ui/react';
 import {ArrowDownIcon} from '@chakra-ui/icons';
 import {AiFillFacebook, AiFillInstagram} from 'react-icons/ai';
-
 import {NaverMap, RenderAfterNavermapsLoaded, Marker} from 'react-naver-maps';
 
+import KakaoTalkIcon from '../../image/contact_kakao.png';
 
 export const More = () => {
   return (
@@ -25,12 +25,12 @@ export const About = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box>
-        <Text fontSize="7xl" fontWeight="bold">
+        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
           KUAAA
         </Text>
       </Box>
       <Box my={-5}>
-        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity}>
+        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity} whiteSpace="nowrap">
           고려대학교 아마추어 천문회
         </Text>
       </Box>
@@ -48,12 +48,12 @@ export const Observation = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1}>
-        <Text fontSize="7xl" fontWeight="bold">
+        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
           관측회
         </Text>
       </Box>
       <Box my={-1}>
-        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity}>
+        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity} whiteSpace="nowrap">
           밤하늘, 별, 은하수
         </Text>
       </Box>
@@ -76,12 +76,12 @@ export const Seminar = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1}>
-        <Text fontSize="7xl" fontWeight="bold">
+        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
             세미나
         </Text>
       </Box>
       <Box my={-1}>
-        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity}>
+        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity} whiteSpace="nowrap">
             천문학과 친해지기
         </Text>
       </Box>
@@ -104,12 +104,12 @@ export const Exhibition = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1.5}>
-        <Text fontSize="7xl" fontWeight="bold">
+        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
         천체사진전
         </Text>
       </Box>
       <Box my={-1}>
-        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity}>
+        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity} whiteSpace="nowrap">
         추억 나누기
         </Text>
       </Box>
@@ -129,12 +129,12 @@ export const Etc = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1}>
-        <Text fontSize="6xl" fontWeight="bold">
+        <Text fontSize="6xl" fontWeight="bold" whiteSpace="nowrap">
             출사, MT, 합숙
         </Text>
       </Box>
       <Box my={-1}>
-        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity}>
+        <Text fontSize="2xl" fontWeight="semibold" opacity={opacity} whiteSpace="nowrap">
             기타 행사들
         </Text>
       </Box>
@@ -157,7 +157,7 @@ export const Etc = () => {
 export const Contact = () => {
   return (
     <Box>
-      <Flex minHeight="60%" my="10%" mb="15%" px="10%">
+      <Flex>
         <Box width="50%" my="-10%" justifyContent="center" textAlign="center">
           <Text fontSize="2xl" fontWeight="bold">찾아오는 길</Text>
           <Text mt={3} mb={5} fontWeight="semibold">고려대학교 자연계캠퍼스 애기능학생회관 403호</Text>
@@ -167,7 +167,7 @@ export const Contact = () => {
               mapDivId={'naver-maps-kuaaa'}
               style={{
                 width: '80%',
-                height: '90%',
+                height: '100%',
               }}
               defaultCenter={{lat: 37.582451, lng: 127.027568}}
               defaultZoom={16}
@@ -193,6 +193,10 @@ export const Contact = () => {
               <Icon as={AiFillInstagram} width={10} height={10} color="red.200"/>
             </Link>
             <Spacer/>
+            <Link href="https://pf.kakao.com/_xginIM" isExternal>
+              <Img src={KakaoTalkIcon} width={10} height={10} color="yellow.200"/>
+            </Link>
+            <Spacer/>
           </Flex>
         </Box>
         <Spacer/>
@@ -203,6 +207,7 @@ export const Contact = () => {
           <Text fontSize="lg" textAlign="center">온라인 구글폼 가입원서 기입</Text>
           <Box height={10} />
         </Box>
+        <Spacer/>
       </Flex>
     </Box>
   );
