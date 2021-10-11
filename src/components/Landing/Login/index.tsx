@@ -5,7 +5,7 @@ import KUAAAWhiteLogo from '../../../image/kuaaa_logo_white.png';
 
 export const LoginArea = () => {
   return (
-    <Flex minHeight='100vh' width='full' align="center" justifyContent="center">
+    <Flex minHeight='60vh' width='full' align="center" justifyContent="center">
       <Box
         borderWidth={1}
         px={4}

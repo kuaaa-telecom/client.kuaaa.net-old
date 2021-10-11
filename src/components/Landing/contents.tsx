@@ -198,14 +198,14 @@ export const Contact = () => {
             </Link>
             <Spacer/>
           </Flex>
-        </Box>
-        <Spacer/>
-        <Box textAlign="center">
-          <Text fontSize="2xl" fontWeight="bold">가입하는 법</Text>
-          <Text fontSize="lg" mt={2}>동아리방에서 가입원서 직접 작성</Text>
-          <Text textAlign="center">or</Text>
-          <Text fontSize="lg" textAlign="center">온라인 구글폼 가입원서 기입</Text>
-          <Box height={10} />
+          <Box height="50%"/>
+          <Box textAlign="center">
+            <Text fontSize="2xl" fontWeight="bold">가입하는 법</Text>
+            <Text fontSize="lg" mt={2}>동아리방에서 가입원서 직접 작성</Text>
+            <Text textAlign="center">or</Text>
+            <Text fontSize="lg" textAlign="center">온라인 구글폼 가입원서 기입</Text>
+            <Box height={10} />
+          </Box>
         </Box>
         <Spacer/>
       </Flex>

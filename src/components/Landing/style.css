@@ -29,7 +29,13 @@
 #slide_contact {
     background-color: #303030;
 }
-#fp-nav ul li a span, 
+
+#fp-nav ul li a:active {
+    background: white;
+}
+#fp-nav ul li a span {
+    background: white;
+}
 .fp-slidesNav ul li a span {
     background: white;
 }
@@ -42,18 +48,16 @@
     z-index:9;
     text-align:left;
     padding: 20px;
-}
-
-#header{
     top:0px;
 }
 
 #more{
-    position:absolute;
-    bottom:5%;
+    position: absolute;
     left: 50%;
-    transform: translateX(-45%);
+    transform: translateX(-50%);
+    bottom: 0%;
 }
+
 
 #react-naver-map {
     display: block;
