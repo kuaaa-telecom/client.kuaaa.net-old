@@ -3,7 +3,7 @@ import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Butto
 
 import KUAAAWhiteLogo from '../../../image/kuaaa_logo_white.png';
 
-export const LoginArea = () => {
+export const LoginArea: React.FC = () => {
   return (
     <Flex minHeight='60vh' width='full' align="center" justifyContent="center">
       <Box
@@ -25,7 +25,7 @@ export const LoginArea = () => {
   );
 };
 
-const LoginHeader = () => {
+const LoginHeader: React.FC = () => {
   return (
     <Box textAlign="center">
       <Heading>
@@ -39,7 +39,7 @@ const LoginHeader = () => {
   );
 };
 
-const LoginForm = () => {
+const LoginForm: React.FC = () => {
   const [id, setid] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
@@ -123,7 +123,7 @@ const LoginForm = () => {
   );
 };
 
-const LoginFooter = () => {
+const LoginFooter: React.FC = () => {
   return (
     <Box>
     </Box>

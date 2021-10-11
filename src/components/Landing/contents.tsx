@@ -6,7 +6,7 @@ import {NaverMap, RenderAfterNavermapsLoaded, Marker} from 'react-naver-maps';
 
 import KakaoTalkIcon from '../../image/contact_kakao.png';
 
-export const More = () => {
+export const More: React.FC = () => {
   return (
     <Box id="more">
       <Text as="span" fontSize="2xl">KUAAA</Text> <ArrowDownIcon w={20} h={20}/> <Text as="span" fontSize="2xl">둘러보기</Text>
@@ -14,14 +14,14 @@ export const More = () => {
   );
 };
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <div id="header"> 고려대학교 아마추어 천문회 | Korea University Amateur Astronomical Association </div>
   );
 };
 
 const opacity = 0.8;
-export const About = () => {
+export const About: React.FC = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box>
@@ -44,7 +44,7 @@ export const About = () => {
   );
 };
 
-export const Observation = () => {
+export const Observation: React.FC = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1}>
@@ -72,7 +72,7 @@ export const Observation = () => {
   );
 };
 
-export const Seminar = () => {
+export const Seminar: React.FC = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1}>
@@ -100,7 +100,7 @@ export const Seminar = () => {
   );
 };
 
-export const Exhibition = () => {
+export const Exhibition: React.FC = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1.5}>
@@ -125,7 +125,7 @@ export const Exhibition = () => {
   );
 };
 
-export const Etc = () => {
+export const Etc: React.FC = () => {
   return (
     <Box maxW="25%" mx="20%">
       <Box ml={-1}>
@@ -154,7 +154,7 @@ export const Etc = () => {
 };
 
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
   return (
     <Box>
       <Flex>
