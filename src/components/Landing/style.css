@@ -4,6 +4,10 @@
     background-position: center;
 }
 
+.contents{
+    font-family: 'Source Sans Pro';
+}
+
 #slide_login {
     background-image: url("/src/image/slide_login.png");
 }
@@ -25,9 +29,11 @@
 #slide_contact {
     background-color: #303030;
 }
-#fp-nav ul li a span, 
+
+#fp-nav ul li a:active span,
+#fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: white;
+    background-color: white !important;
 }
 
 #header{
@@ -38,15 +44,19 @@
     z-index:9;
     text-align:left;
     padding: 20px;
-}
-
-#header{
     top:0px;
 }
 
 #more{
-    position:absolute;
-    bottom:0%;
+    position: absolute;
     left: 50%;
-    transform: translateX(-45%);
+    transform: translateX(-50%);
+    bottom: 0%;
+}
+
+
+#react-naver-map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

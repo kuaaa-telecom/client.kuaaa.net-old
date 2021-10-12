@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Button, Input, CircularProgress, Text} from '@chakra-ui/react';
+import {Flex, Box, Heading, FormControl, FormLabel, Stack, Checkbox, Link, Button, Input, CircularProgress, Text, Img, Spacer} from '@chakra-ui/react';
 
+import KUAAAWhiteLogo from '../../../image/kuaaa_logo_white.png';
 
-export const LoginArea = () => {
+export const LoginArea: React.FC = () => {
   return (
-    <Flex minHeight='100vh' width='full' align="center" justifyContent="center">
+    <Flex minHeight='60vh' width='full' align="center" justifyContent="center">
       <Box
         borderWidth={1}
         px={4}
@@ -24,15 +25,21 @@ export const LoginArea = () => {
   );
 };
 
-const LoginHeader = () => {
+const LoginHeader: React.FC = () => {
   return (
     <Box textAlign="center">
-      <Heading><Text>혼저옵서예</Text></Heading>
+      <Heading>
+        <Flex>
+          <Spacer/>
+          <Img src={KUAAAWhiteLogo} width="25%" height="25%"></Img>
+          <Spacer/>
+        </Flex>
+      </Heading>
     </Box>
   );
 };
 
-const LoginForm = () => {
+const LoginForm: React.FC = () => {
   const [id, setid] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
@@ -116,7 +123,7 @@ const LoginForm = () => {
   );
 };
 
-const LoginFooter = () => {
+const LoginFooter: React.FC = () => {
   return (
     <Box>
     </Box>
