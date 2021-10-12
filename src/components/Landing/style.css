@@ -30,14 +30,10 @@
     background-color: #303030;
 }
 
-#fp-nav ul li a:active {
-    background: white;
-}
-#fp-nav ul li a span {
-    background: white;
-}
+#fp-nav ul li a:active,
+#fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: white;
+    background-color: white;
 }
 
 #header{
