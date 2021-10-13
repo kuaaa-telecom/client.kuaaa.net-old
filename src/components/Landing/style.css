@@ -2,10 +2,12 @@
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center;
+    padding: 0 20px;
 }
 
 .contents{
     font-family: 'Source Sans Pro';
+    word-break: keep-all;
 }
 
 #slide_login {
@@ -49,9 +51,11 @@
 
 #more{
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 
@@ -59,4 +63,5 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vw;
 }

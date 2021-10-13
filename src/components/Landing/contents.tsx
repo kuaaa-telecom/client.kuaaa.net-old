@@ -20,12 +20,22 @@ export const Header: React.FC = () => {
   );
 };
 
+const boxProps = {
+  maxW: {base: '100%', sm: '25%'},
+  mx: {base: '0', sm: '20%'},
+};
+
+const titleFontSize = {
+  base: '5xl',
+  sm: '7xl',
+};
+
 const opacity = 0.8;
 export const About: React.FC = () => {
   return (
-    <Box maxW="25%" mx="20%">
+    <Box {...boxProps}>
       <Box>
-        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
+        <Text fontSize={titleFontSize} fontWeight="bold" whiteSpace="nowrap">
           KUAAA
         </Text>
       </Box>
@@ -46,9 +56,9 @@ export const About: React.FC = () => {
 
 export const Observation: React.FC = () => {
   return (
-    <Box maxW="25%" mx="20%">
+    <Box {...boxProps}>
       <Box ml={-1}>
-        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
+        <Text fontSize={titleFontSize} fontWeight="bold" whiteSpace="nowrap">
           관측회
         </Text>
       </Box>
@@ -74,9 +84,9 @@ export const Observation: React.FC = () => {
 
 export const Seminar: React.FC = () => {
   return (
-    <Box maxW="25%" mx="20%">
+    <Box {...boxProps}>
       <Box ml={-1}>
-        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
+        <Text fontSize={titleFontSize} fontWeight="bold" whiteSpace="nowrap">
             세미나
         </Text>
       </Box>
@@ -102,9 +112,9 @@ export const Seminar: React.FC = () => {
 
 export const Exhibition: React.FC = () => {
   return (
-    <Box maxW="25%" mx="20%">
+    <Box {...boxProps}>
       <Box ml={-1.5}>
-        <Text fontSize="7xl" fontWeight="bold" whiteSpace="nowrap">
+        <Text fontSize={titleFontSize} fontWeight="bold" whiteSpace="nowrap">
         천체사진전
         </Text>
       </Box>
@@ -127,7 +137,7 @@ export const Exhibition: React.FC = () => {
 
 export const Etc: React.FC = () => {
   return (
-    <Box maxW="25%" mx="20%">
+    <Box {...boxProps}>
       <Box ml={-1}>
         <Text fontSize="6xl" fontWeight="bold" whiteSpace="nowrap">
             출사, MT, 합숙
@@ -157,8 +167,8 @@ export const Etc: React.FC = () => {
 export const Contact: React.FC = () => {
   return (
     <Box>
-      <Flex>
-        <Box width="50%" my="-10%" justifyContent="center" textAlign="center">
+      <Flex flexDirection={{base: 'column', sm: 'row'}}>
+        <Box width="100%" my="-10%" justifyContent="center" textAlign="center">
           <Text fontSize="2xl" fontWeight="bold">찾아오는 길</Text>
           <Text mt={3} mb={5} fontWeight="semibold">고려대학교 자연계캠퍼스 애기능학생회관 403호</Text>
           <RenderAfterNavermapsLoaded
@@ -180,23 +190,19 @@ export const Contact: React.FC = () => {
             </NaverMap>
           </RenderAfterNavermapsLoaded>
         </Box>
-        <Spacer/>
-        <Box textAlign="center">
+        <Spacer />
+        <Box width="100%" textAlign="center">
           <Text fontSize="2xl" fontWeight="bold">문의</Text>
-          <Flex my={3}>
-            <Spacer/>
-            <Link href="https://www.facebook.com/KUAAA1982" isExternal>
+          <Flex my={3} justifyContent="center">
+            <Link m="1em" href="https://www.facebook.com/KUAAA1982" isExternal>
               <Icon as={AiFillFacebook} width={10} height={10} color="blue.400" />
             </Link>
-            <Spacer/>
-            <Link href="https://www.instagram.com/koreauniv_aaa/?hl=ko" isExternal>
+            <Link m="1em" href="https://www.instagram.com/koreauniv_aaa/?hl=ko" isExternal>
               <Icon as={AiFillInstagram} width={10} height={10} color="red.200"/>
             </Link>
-            <Spacer/>
-            <Link href="https://pf.kakao.com/_xginIM" isExternal>
+            <Link m="1em" href="https://pf.kakao.com/_xginIM" isExternal>
               <Img src={KakaoTalkIcon} width={10} height={10} color="yellow.200"/>
             </Link>
-            <Spacer/>
           </Flex>
           <Box height="50%"/>
           <Box textAlign="center">
